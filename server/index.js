@@ -27,6 +27,6 @@ app.use('/user', UserRoutes);
 
 
 // Démarrer le serveur
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0',() => {
     console.log(`http://localhost:${PORT}`);
 });

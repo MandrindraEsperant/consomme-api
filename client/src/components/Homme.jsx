@@ -10,11 +10,11 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/user/")
+      .get("/api/user/")
       .then((res) => {setData(res.data.data); 
-    //     console.log('====================================');
-    //   console.log(res.data.data);
-    //   console.log('====================================');
+      //   console.log('====================================');
+      // console.log(res.data.data);
+      // console.log('====================================');
     })
       .catch((err) => console.log(err));
   }, [data]);

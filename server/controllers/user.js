@@ -24,18 +24,18 @@ const getAllUser = (req, res) => {
 //     });
 // };
 
-// const deleteQuestionnaire = (req, res) => {
-//     const { id } = req.params;
-//     const query = `DELETE FROM Questionnaire WHERE id_question = ?`;
+const deleteUser = (req, res) => {
+    const { id } = req.params;
+    const query = `DELETE FROM user WHERE id = ?`;
 
-//     db.run(query, id, function(err) {
-//         if (err) {
-//             res.status(500).json({ error: err.message });
-//             return;
-//         }
-//         res.status(200).json({ message: `Questionnaire with ID ${id} deleted` });
-//     });
-// };
+    db.query(query, id, function(err) {
+        if (err) {
+            res.status(500).json({ error: err.message });
+            return;
+        }
+        res.status(200).json({ message: `user with ID ${id} deleted` });
+    });
+};
 
 // const updateQuestionnaire = (req, res) => {
 //     const { id } = req.params;
@@ -91,7 +91,7 @@ const getAllUser = (req, res) => {
 module.exports = {
     getAllUser,
     // addQuestionnaire,
-    // deleteQuestionnaire,
+    deleteUser,
     // updateQuestionnaire,
     // getQuestionnaireById,
     // getRandomQuestionnaires
