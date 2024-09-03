@@ -46,6 +46,7 @@ const Home = () => {
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
+              <th scope="col">Last name</th>
               <th scope="col">Description</th>
               {/* <th scope="col">Quantité</th>
               <th scope="col">Montant</th> */}
@@ -64,7 +65,12 @@ const Home = () => {
                   <td>{produit.description}</td>
                  
                   <td>
-                    <Link
+                  <Link
+                    //   to={`/update/${produit.id}`}
+                      className="btn text-white btn-sm bg-primary mx-2"
+                    >
+                      Modifier
+                    </Link><Link
                     //   to={`/update/${produit.id}`}
                       className="btn text-white btn-sm bg-primary mx-2"
                     >
