@@ -7,6 +7,7 @@ const userController = new UserController();
 const router = express.Router();
 
 router.get("/", userController.getUsers);
+router.put("/:id", userController.updateUser);
 
 
 module.exports = router;
