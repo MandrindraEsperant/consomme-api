@@ -10,19 +10,12 @@ app.use(express.json());
 
 
 // Importer les routes
-const UserRoutes = require('./routes/user');
-// const utilisateurRoutes = require('./routes/utilisateurRoutes');
-// const questionnaireRoutes = require('./routes/questionnaireRoutes');
-// const noteRoutes = require('./routes/noteRoutes');
+const UserRoutes = require('./routes/UserRoute');
+
+
 
 // Utiliser les routes
 app.use('/user', UserRoutes);
-// app.use('/utilisateurs', utilisateurRoutes);
-// app.use('/questionnaires', questionnaireRoutes);
-// app.use('/note', noteRoutes);
-
-
-
 
 
 
