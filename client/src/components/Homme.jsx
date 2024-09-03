@@ -11,13 +11,13 @@ const Home = () => {
   useEffect(() => {
     axios
       .get("/api/user/")
-      .then((res) => {setData(res.data.data); 
+      .then((res) => {setData(res.data); 
       //   console.log('====================================');
-      // console.log(res.data.data);
+      // console.log(res.data);
       // console.log('====================================');
     })
       .catch((err) => console.log(err));
-  }, [data]);
+  }, []);
 
   return (
     <div className="division">
